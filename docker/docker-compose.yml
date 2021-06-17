@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    php-fpm:
+        build: ./php-fpm
+        volumes:
+            - ~/workspace/weather:/var/www/html/weather:rw
+    nginx:
+        build: ./nginx
+        volumes:
+            - ~/workspace/weather:/var/www/html/weather:rw
+        ports:
+            - 80:80

@@ -1,0 +1,33 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+city:
+    path: /current/city/{city}
+    controller: App\Controller\OpenWeatherMapCurrentWeatherController::city
+    methods: GET
+
+id:
+    path: /current/id/{id}
+    controller: App\Controller\OpenWeatherMapCurrentWeatherController::id
+    methods: GET
+
+latLong:
+    path: /current/lat/{lat}/long/{long}
+    controller: App\Controller\OpenWeatherMapCurrentWeatherController::latLong
+    methods: GET
+
+zip:
+    path: /current/zip/{zip}
+    controller: App\Controller\OpenWeatherMapCurrentWeatherController::zip
+    methods: GET
+
+bbox:
+    path: /current/bbox/{bbox}
+    controller: App\Controller\OpenWeatherMapCurrentWeatherController::bbox
+    methods: GET
+
+find:
+    path: /current/find/lat/{lat}/long/{long}
+    controller: App\Controller\OpenWeatherMapCurrentWeatherController::find
+    methods: GET
