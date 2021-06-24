@@ -23,9 +23,7 @@ class AbstractOpenWeatherMapExternal
     protected function currentWeather(array $query, string $url): array
     {
         $response = $this->httpClient->request('GET', $url, [
-            'query' => [
-                $query
-            ]
+            'query' => $query
         ]);
 
         return $response->toArray();
